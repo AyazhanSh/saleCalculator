@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sale</title>
+</head>
+<body>
+
+    <input>
+    <button data = "3" class="btn">3</button>
+    <button data = "6" class="btn">6</button>
+    <button data = "9" class="btn">9</button>
+    <button data = "12" class="btn">12</button>
+
+    <script>
+
+        let btn = document.querySelectorAll(".btn");
+
+        for(let i = 0; i < btn.length; i++){
+            btn[i].onclick = function(){
+                let price = document.querySelector("input").value;
+                let time = this.getAttribute("data");
+                alert(price * time - time * time *price/100)
+            }
+
+        }
+    </script>
+</body>
+
+</html>
